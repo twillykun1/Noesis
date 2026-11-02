@@ -41,6 +41,7 @@ class OfficialInstallTests(unittest.TestCase):
 
     def test_exact_copy_and_existing_destination_preserved(self):
         self.assertEqual(self.install(), 0)
+        self.assertEqual(set(hashes(self.dest / 'noesis')), {'SKILL.md', 'examples/scenarios.md', 'references/review.md', 'references/complex-projects.md', 'templates/decision-record.md'})
         self.assertEqual(hashes(self.dest / 'noesis'), hashes(ROOT / 'skills/noesis'))
         sentinel = self.dest / 'noesis/sentinel'
         sentinel.write_text('keep')

@@ -18,6 +18,8 @@ class PackageTests(unittest.TestCase):
 
     def test_candidate_is_self_contained(self):
         self.assertTrue((ROOT / 'skills/noesis/SKILL.md').is_file(), 'canonical package is missing')
+        self.assertTrue((ROOT / 'skills/noesis/references/complex-projects.md').is_file())
+        self.assertIn('version: "0.3.0"', (ROOT / 'skills/noesis/SKILL.md').read_text())
         with tempfile.TemporaryDirectory() as tmp:
             package = Path(tmp) / 'noesis'
             shutil.copytree(ROOT / 'skills/noesis', package)
