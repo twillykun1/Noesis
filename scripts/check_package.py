@@ -37,7 +37,7 @@ def check(package):
         errors.append(f'file set differs: {sorted(found ^ FILES)}')
     core = texts.get('SKILL.md', '')
     # Deliberately validate the small supported frontmatter schema, not arbitrary YAML.
-    header = re.match(r'\A---\nname: noesis\ndescription: (Use when[^\n]{1,1016})\nmetadata:\n  version: "0\.3\.0"\n---\n', core)
+    header = re.match(r'\A---\nname: noesis\ndescription: (Use when[^\n]{1,1016})\nmetadata:\n  version: "0\.3\.1"\n---\n', core)
     if header and ': ' in header.group(1):
         errors.append('unsupported description scalar syntax')
     if not header:

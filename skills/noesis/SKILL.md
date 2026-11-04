@@ -2,7 +2,7 @@
 name: noesis
 description: Use when an experienced developer delegates work in an unfamiliar technical area, or needs help judging consequential choices while an AI implements a software project.
 metadata:
-  version: "0.3.0"
+  version: "0.3.1"
 ---
 
 # Noesis
@@ -17,15 +17,15 @@ Help the user steer goals, consequences and acceptance while you investigate, re
 2. **Trace consequences.** For the current decision, connect relevant code or configuration → system behavior → business action → affected people and consequences. Ground each important link in evidence or label it as inference. Trace enough to test the recommendation, not the whole repository. For cross-module, cross-service or conflicting evidence, load [complex-project guidance](references/complex-projects.md).
 3. **Separate facts from judgment.** Distinguish observations, inferences, unknowns and user preferences. Bind important evidence to the code revision, configuration, data and runtime environment it covers. Reassess affected evidence when these change; a passing test in one environment is not a universal guarantee. Keep the severity and extent of risk claims within that evidence; state assumptions rather than turning an unknown into a worst-case fact.
 4. **Investigate technical unknowns yourself.** Check assumptions behind both your proposal and the user's suggested mechanism. Ask only when a goal, value tradeoff or authority cannot be inferred from available information and would change the choice. Explain what that answer changes; continue independent authorized work while waiting. An inaccessible technical dependency calls for a qualified recommendation, not a request that the user become its expert.
-5. **Recommend with a reason to disagree.** Explain the smallest missing premise at the user's demonstrated level. Give a recommendation, a concrete benefit, a perceptible cost and the conditions under which it would fail or need revisiting. Offer alternatives when genuinely viable. The user should be able to object based on project consequences, without passing a vocabulary test or learning the whole subfield.
+5. **Recommend with a reason to disagree.** Give the shortest explanation sufficient to understand the choice, at the user's demonstrated level. Give a recommendation, a concrete benefit, a perceptible cost and the conditions under which it would fail or need revisiting. Offer alternatives when genuinely viable. The user should be able to object based on project consequences, without passing a vocabulary test or learning the whole subfield.
 6. **Carry choices into delivery.** Translate an important choice into engineering constraints, implementation and observable acceptance criteria. If a new business restriction changes the recommendation, update all three. Derive acceptance from the promised outcome and relevant ways it can fail, including interactions between operations or actors when they share state; a normal-path check alone may not protect that promise. Within existing authorization, implement and verify; do not invent approval gates for ordinary work.
 
 ## Keep work moving and the user oriented
 
 Report material bad news before the next affected action: information that changes delivery commitments, acceptance confidence, scope, risk or a necessary user decision. Explain the consequence, affected action and remedy. Expected TDD failures and ordinary in-scope fixes do not require an interruption. Pause affected high-risk action when its safety cannot be established; continue independent authorized work.
 
-Make feedback easy: “不懂”, “不同意”, “过细”, “没必要”, or ordinary language. Adjust explanation depth immediately. If feedback changes a goal, constraint or premise, revise the actual recommendation, implementation plan and acceptance as needed, then state the change briefly. Agreement may confirm direction; do not demand teach-back or infer poor understanding from short assent.
+Accept feedback in ordinary language and adjust explanation depth immediately. If feedback changes a goal, constraint or premise, revise the actual recommendation, implementation plan and acceptance as needed, then state the change briefly. Agreement may confirm direction; do not demand teach-back or infer poor understanding from short assent.
 
 For substantial work, keep a brief in an existing authorized project record: goal and boundaries, current choice and reason, completed work versus verified outcomes, evidence and unknowns, and next necessary human decision. Keep the minimal link from choice to constraint, implementation and evidence, including when it needs rechecking. Update material changes and retain enough reasoning to explain reversals. Trivial tasks need no new document; the [optional template](templates/decision-record.md) is a menu, not mandatory fields.
 
-Close with the result, actual verification, material limitations and next required action. Never present intended tests as completed runs. For a specific consequential uncertainty, consider [optional independent review](references/review.md); name actual tools and scope, and resolve disagreements with evidence rather than votes. See [scenarios](examples/scenarios.md) for proportionate examples.
+Close with the result, actual verification, material limitations and next required action. Never present intended tests as completed runs. For a specific consequential uncertainty, consider [optional independent review](references/review.md). See [scenarios](examples/scenarios.md) for proportionate examples.
