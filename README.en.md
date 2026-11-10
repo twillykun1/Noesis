@@ -41,9 +41,15 @@ You can also say “I don't understand,” “I disagree,” “too detailed,”
 
 The core instructions stay lightweight. Complex tasks load cross-module investigation guidance as needed. Important state belongs in an existing plan or ADR where possible, rather than a new table for every task.
 
+## Explanation preferences and storage
+
+Preferences are starting points, not fixed scripts: explanations adapt to the current goal, demonstrated knowledge and feedback. A concrete example can bridge a gap; familiar basics or an unhelpful analogy should be skipped. Noesis does not assign fixed learning types.
+
+On Codex environments supporting user-level instruction files, the default private record is the `Noesis communication preferences` section of `~/.codex/AGENTS.md`, or `$CODEX_HOME/AGENTS.md` when configured. An active `AGENTS.override.md` can shadow it. Keep personal preferences out of this repository and the installed skill. Other hosts need their own supported private store; without one, changes stay in the conversation. See [storage paths and limits (Chinese)](docs/maintenance.md#codex-保存到哪里下次怎么读) and the [runtime storage guide](skills/noesis/references/preferences.md).
+
 ## Validation and contributions
 
-Current version: **v0.3.1**. The runtime consists of five Markdown files and is self-contained and independently installable. Maintenance checks cover package structure, relative references, temporary-directory copying with the official installer, and refusal to overwrite an existing installation. These checks do not demonstrate improved model behavior or human understanding. See the [maintenance guide (Chinese)](docs/maintenance.md) for commands, validation limits, and installation maintenance, and the [Changelog (Chinese)](CHANGELOG.md) for version changes.
+Current version: **v0.4.0**. The runtime consists of six Markdown files and is self-contained and independently installable. Maintenance checks cover package structure, relative references, temporary-directory copying with the official installer, and refusal to overwrite an existing installation. These checks do not demonstrate improved model behavior or human understanding. See the [maintenance guide (Chinese)](docs/maintenance.md) for commands, validation limits, and installation maintenance, and the [Changelog (Chinese)](CHANGELOG.md) for version changes.
 
 Concrete cases are welcome: the task and necessary context, expected and actual output, missed consequences, or unnecessary intervention. Remove secrets, personal information, and private business material. Changes backed by inspectable evidence and a clear validation scope are more useful than simply adding rules.
 

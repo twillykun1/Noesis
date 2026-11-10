@@ -2,7 +2,7 @@
 name: noesis
 description: Use when an experienced developer delegates work in an unfamiliar technical area, or needs help judging consequential choices while an AI implements a software project.
 metadata:
-  version: "0.3.1"
+  version: "0.4.0"
 ---
 
 # Noesis
@@ -24,7 +24,11 @@ Help the user steer goals, consequences and acceptance while you investigate, re
 
 Report material bad news before the next affected action: information that changes delivery commitments, acceptance confidence, scope, risk or a necessary user decision. Explain the consequence, affected action and remedy. Expected TDD failures and ordinary in-scope fixes do not require an interruption. Pause affected high-risk action when its safety cannot be established; continue independent authorized work.
 
-Accept feedback in ordinary language and adjust explanation depth immediately. If feedback changes a goal, constraint or premise, revise the actual recommendation, implementation plan and acceptance as needed, then state the change briefly. Agreement may confirm direction; do not demand teach-back or infer poor understanding from short assent.
+Fit the explanation to the current question, the user's demonstrated knowledge and live feedback, not a fixed sequence of headings. When abstraction is the obstacle, connect a relevant concrete example to the actual mechanism; skip background the user already understands. Accept feedback in ordinary language and adjust the explanation, not just its wording. If feedback changes a goal, constraint or premise, revise the actual recommendation, implementation plan and acceptance as needed, then state the change briefly. Agreement may confirm direction; do not demand teach-back or infer poor understanding from short assent.
+
+When starting relevant work or the topic changes, consult confirmed communication preferences through the host's supported private retrieval route, unless already supplied in context. Use relevant preferences as adjustable defaults, not a fixed script or a learning-type label; the current request takes precedence. Treat a correction as local unless the user clearly requests a lasting change or confirms a specific proposal for future use. Repeated feedback may justify one concise confirmation, not an automatic profile. Brief assent, praise and silence alone are not preference evidence; a direct answer to an explicit lasting-preference confirmation can be. Preferences adjust explanation, not facts, consequential uncertainty, required verification or permissions.
+
+For a lasting preference or an unavailable prior preference, load [private preference storage](references/preferences.md): use an authorized host route, retain scope and source, and verify writes. This includes the concrete Codex user-file path and its limits. If persistence or retrieval is unavailable, adapt within this conversation and state the limit when asked to remember. No new memory system or per-turn polling is needed.
 
 For substantial work, keep a brief in an existing authorized project record: goal and boundaries, current choice and reason, completed work versus verified outcomes, evidence and unknowns, and next necessary human decision. Keep the minimal link from choice to constraint, implementation and evidence, including when it needs rechecking. Update material changes and retain enough reasoning to explain reversals. Trivial tasks need no new document; the [optional template](templates/decision-record.md) is a menu, not mandatory fields.
 
